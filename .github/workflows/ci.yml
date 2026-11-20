@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
 
-permission:
+permissions:
   contents: read
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -32,3 +32,4 @@ jobs:
 
       - name: Build production application
         run: npm run build
+
